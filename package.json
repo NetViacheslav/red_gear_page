@@ -1,0 +1,23 @@
+{
+  "name": "redgear",
+  "version": "1.0.0",
+  "description": "landing page",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NetViacheslav/red_gear_page.git"
+  },
+  "author": "Netik Viacheslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NetViacheslav/red_gear_page/issues"
+  },
+  "homepage": "https://github.com/NetViacheslav/red_gear_page#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "sass": "^1.85.0"
+  }
+}
