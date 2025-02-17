@@ -5,12 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@0;1&family=Anton&family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon-96x96.png" type="image/png">
   <link rel="stylesheet" href="dist/index.css">
   <title>RedGear</title>
 </head>
 <body>
-  hello
+  <header class="header" aria-label="header section">
+    <div class="container">
+      <nav class="header__nav nav" aria-label="header navigation">
+        <div class="nav__title">
+          <a href="#" class="nav__title-link" target="_self" aria-label="link logo">
+            <svg class="logo" aria-label="logo">
+              <use href="assets/sprites.svg#logo-icon"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="nav__links">
+          <ul class="nav__links-list list" aria-label="header navigation links">
+            <li class="list__item" aria-label="first link">
+              <a href="#" class="list__item-link" aria-label="link about">About Us</a>
+            </li>
+
+            <li class="list__item" aria-label="second link">
+              <a href="#" class="list__item-link" aria-label="link contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__lang-wrapper lang">
+          <a href="#" class="lang__link" aria-label="link language">
+            <svg class="lang__link-icon" aria-label="language image">
+              <use href="assets/sprites.svg#lang-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
 </body>
 </html>

@@ -4,5 +4,38 @@
 
 body {
   margin: 0;
-  font-family: Roboto, Anton, sans-serif;
+  // font-family: Roboto, Anton, Alumni Sans, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 132px;
+  height: 55px;
+  margin-top: 6px;
 }
