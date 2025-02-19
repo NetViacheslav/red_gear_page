@@ -1,0 +1,80 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.hero-section {
+  background: url('../assets/images/BG-factory.webp') center/cover no-repeat;
+}
+
+.hero {
+  max-width: 870px;
+  height: 841px;
+  margin: 0 auto;
+  padding: 155px 0 0 0;
+
+  &__content {
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+
+    .hero__title {
+      @include m.font(v.$font_anton, 96px, v.$color_font, 10px);
+      line-height: 1.7;
+    }
+
+    .hero__action-btn {
+      width: 393px;
+      height: 78px;
+      background-color: v.$color_font;
+      border: none;
+      border-radius: 40px;
+      @include m.font(v.$font_roboto, 24px, v.$color_white);
+      @include m.position(absolute, 1, -1, bottom, right, 40px, -40px);
+
+      &:hover {
+        background-color: color.adjust(v.$color_font, $alpha: -0.1);
+        cursor: pointer;
+      }
+      &:focus-visible {
+        outline: 5px solid v.$color_white;
+      }
+    }
+  }
+
+  &__notify {
+    position: relative;
+    margin: 60px auto 0;
+    width: 750px;
+    height: 60px;
+    background-color: color.adjust(v.$color_white, $alpha: -0.2);
+    border-radius: 10px;
+    @include m.d-flex(end, center, nowrap, row);
+
+    &-img {
+      @include m.position(absolute, 1, -1, top, left, 25, -70px);
+    }
+
+    &-content {
+      width: 590px;
+      height: 60px;
+      border-right: 1px solid v.$color_font;
+      @include m.font(v.$font_roboto, 16px);
+    }
+
+    &-btn {
+      width: 150px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      @include m.font(v.$font_roboto, 24px);
+      @extend %hover-black;
+
+      &:focus-visible {
+        border: 2px solid v.$color_font;
+        border-radius: 5px;
+      }
+    }
+  }
+}
