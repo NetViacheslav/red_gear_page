@@ -9,7 +9,9 @@
   background-color: color.adjust(v.$color_bg, $alpha: -0.8);
 
   .nav {
+    max-width: 1330px;
     height: 70px;
+    margin: 0 auto;
     @include m.d-flex(start, center);
 
     &__title {
