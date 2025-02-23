@@ -1,0 +1,74 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'sass:color';
+
+.work-section {
+  padding: 85px 10px 160px;
+  background-color: v.$color_bg;
+
+  .work {
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+      margin: 0 0 100px 0;
+      @include m.font(v.$font_anton, 64px, v.$color_font, 3px);
+
+      @media (max-width: v.$media_sm) {
+        @include m.font(v.$font_anton, 50px, v.$color_font, 1px);
+      }
+    }
+
+    &__cards-wrapper {
+      margin: 0 auto;
+      max-width: 995px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 80px;
+      place-items: center;
+      grid-template-areas:
+        'analysis strategy design'
+        'development implementation optimization';
+
+      .card--analysis {
+        grid-area: analysis;
+        justify-self: start;
+      }
+      .card--design {
+        grid-area: design;
+        justify-self: end;
+      }
+      .card--development {
+        grid-area: development;
+        justify-self: start;
+      }
+      .card--optimization {
+        grid-area: optimization;
+        justify-self: end;
+      }
+
+      @media (max-width: v.$media_md) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+          'analysis strategy'
+          'design development'
+          'implementation optimization';
+
+        .card--analysis,
+        .card--strategy,
+        .card--design,
+        .card--development,
+        .card--implementation,
+        .card--optimization {
+          justify-self: center;
+        }
+      }
+      @media (max-width: v.$media_sm) {
+        @include m.d-flex(center, center, wrap, column, 0, 60px);
+      }
+    }
+  }
+}

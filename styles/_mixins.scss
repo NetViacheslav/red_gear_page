@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 @mixin d-flex(
   $justify: center,
   $align: center,
@@ -38,6 +40,7 @@
 @mixin font(
   $font_family: $font_roboto,
   $size: 16px,
+  $color: v.$color_font,
   $color: #212121,
   $letter_spacing: normal
 ) {
@@ -47,4 +50,14 @@
   }
   color: $color;
   letter-spacing: $letter_spacing;
+}
+
+@mixin box-shadow(
+  $x: 0,
+  $y: 0,
+  $blur: 0,
+  $spread: 14px,
+  $color: v.$color_black
+) {
+  box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color};
 }
