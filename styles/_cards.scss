@@ -1,6 +1,5 @@
 @use 'variables' as v;
 @use 'mixins' as m;
-@use 'placeholders';
 @use 'sass:color';
 
 .info-card {
@@ -8,5 +7,37 @@
   height: 225px;
   padding: 25px 10px 0;
   border-radius: 10px;
+  background-color: v.$color_bg_cards;
   @include m.box-shadow(0, 0, 0, 14px);
+  @include m.d-flex(start, center, nowrap, column, 0, 20px);
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: v.$color_bg_cards;
+  }
+
+  &__title {
+    @include m.font(v.$font_anton, 20px, v.$color_font, 2px);
+  }
+
+  &__description {
+    text-align: center;
+    @include m.font(v.$font_roboto, 16px, v.$color_font, 1px);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: v.$color_bg_graphite;
+    @include m.box-shadow(0, 0, 0, 14px, v.$color_bg_cards);
+
+    .info-card__icon {
+      fill: v.$color_bg_cards;
+      stroke: v.$color_bg_cards;
+    }
+    .info-card__title,
+    .info-card__description {
+      color: v.$color_bg_cards;
+    }
+  }
 }
